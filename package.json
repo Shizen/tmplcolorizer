@@ -1,7 +1,7 @@
 {
-    "name": "shinUnderscore",
-    "displayName": "underscoreLang",
-    "description": "Introducing Underscore tmLanguage file",
+    "name": "@shizen/tmplcolorizer",
+    "displayName": "Underscore Template Colorizer",
+    "description": "Introducing & Augmenting the Underscore tmLanguage file",
     "version": "0.0.2-0",
     "publisher": "shinworks",
     "engines": {
