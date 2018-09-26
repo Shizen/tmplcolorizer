@@ -1,0 +1,182 @@
+{
+  begin = (&lt;)([a-zA-Z0-9:]++)(?=[^&gt;]*&gt;&lt;/\2&gt;);
+  beginCaptures: {
+    1: {
+      name: "punctuation.definition.tag.begin.html"
+    },
+    2: {
+      name: "entity.name.tag.html"
+    }
+  }
+  end = (&gt;)(&lt;)(/)(\2)(&gt;);
+  endCaptures: {
+    1: {
+      name: "punctuation.definition.tag.end.html"
+    },
+    2: {
+      name: "punctuation.definition.tag.begin.html meta.scope.between-tag-pair.html"
+    },
+    3: {
+      name: "punctuation.definition.tag.begin.html"
+    },
+    4: {
+      name: "entity.name.tag.html"
+    },
+    5: {
+      name: "punctuation.definition.tag.end.html"
+    }
+  },
+  name = "meta.tag.any.html";
+  patterns: {
+    include: "#tag-stuff"
+  }
+}
+
+{  begin = '<\?(php|=)?'; end = '\?>'; patterns = (
+       { include = "source.php"; }
+    );
+}
+
+		<dict>
+			<key>begin</key>
+			<string>&lt;\?js</string>
+			<key>end</key>
+			<string>\?&gt;</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+
+			<key>name</key>
+			<string>punctuation.definition.tag.underscoreTmpl</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.doctype.html</string>
+				</dict>
+			</dict>
+
+<dict>
+  <key>begin</key>
+  <string>&lt;\?js</string>
+  <key>end</key>
+  <string>\?&gt;</string>
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>include</key>
+      <string>source.js</string>
+    </dict>
+  </array>
+</dict>
+
+"string": {
+			"patterns": [
+				{
+					"include": "#qstring-single"
+				},
+				{
+					"include": "#qstring-double"
+				},
+				{
+					"include": "#template"
+				}
+			]
+		}
+
+<key>string</key>
+<dict>
+  <key>patterns</key>
+  <array>
+    <dict>
+      <key>include</key>
+      <string>#string-double-quoted</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#string-single-quoted</string>
+    </dict>
+  </array>
+
+
+				<dict>
+					<key>include</key>
+					<string>#string-double-quoted</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#string-single-quoted</string>
+				</dict>
+
+    <dict>
+      <key>include</key>
+      <string>#string-template</string>
+    </dict>
+
+    only if non-whitespace <?
+    only if not non-whitespace <?
+
+    <?python         ?>
+
+    ?>
+
+    
+		<dict>
+			<key>begin</key>
+			<string>(&lt;\?js=?)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.underscoreTmpl</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\?&gt;)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.underscoreTmpl</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+			</array>
+		</dict>
+
+
+
+	<key>foldingStartMarker</key>
+	<string>(?x)
+		(&lt;(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|li|form|dl)\b.*?&gt;
+		|&lt;!--(?!.*--\s*&gt;)
+		|^&lt;!--\ \#tminclude\ (?&gt;.*?--&gt;)$
+		|&lt;\?(?:php)?.*\b(if|for(each)?|while)\b.+:
+		|\{\{?(if|foreach|capture|literal|foreach|php|section|strip)
+		|\{\s*($|\?&gt;\s*$|//|/\*(.*\*/\s*$|(?!.*?\*/)))
+		)</string>
+	<key>foldingStopMarker</key>
+	<string>(?x)
+		(&lt;/(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|li|form|dl)&gt;
+		|^(?!.*?&lt;!--).*?--\s*&gt;
+		|^&lt;!--\ end\ tminclude\ --&gt;$
+		|&lt;\?(?:php)?.*\bend(if|for(each)?|while)\b
+		|\{\{?/(if|foreach|capture|literal|foreach|php|section|strip)
+		|^[^{]*\}
+		)</string>
+
+    
+	<key>foldingStartMarker</key>
+	<string>[^{]*[{][^}]*</string>
+	<key>foldingStopMarker</key>
+	<string>[^}]*[}].*</string>

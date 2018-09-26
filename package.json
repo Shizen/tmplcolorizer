@@ -1,0 +1,26 @@
+{
+    "name": "shinUnderscore",
+    "displayName": "underscoreLang",
+    "description": "Introducing Underscore tmLanguage file",
+    "version": "0.0.1",
+    "publisher": "shinworks",
+    "engines": {
+        "vscode": "^1.27.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "underscore",
+            "aliases": ["HTML (Underscore)", "underscore"],
+            "extensions": [".tmpl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "underscore",
+            "scopeName": "text.html.underscore",
+            "path": "./syntaxes/Underscore.tmLanguage"
+        }]
+    }
+}
