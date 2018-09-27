@@ -51,7 +51,11 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#embedded-control-brackets</string>
+					<string>#embedded-control-bracket</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#embedded-comment</string>
 				</dict>
 			</array>
 		</dict>
@@ -555,6 +559,109 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>embedded-comment</key>
+		<dict>
+			<!-- taken from source.js, introduces a lot of "noisy" scope names ;) -->
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(^[ \\t]+)?((//)(?:\\s*((@)internal)(?=\\s|$))?)</string>	
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.whitespace.comment.leading.embedded.js</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>comment.line.double-slash.embedded.js</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.embedded.js</string>
+						</dict>
+						<key>4</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.internaldeclaration.embedded.js</string>
+						</dict>
+						<key>5</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.decorator.internaldeclaration.embedded.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>(?=\?&gt;|$)</string>
+					<key>name</key>
+					<string>comment.line.double-slash.embedded.js</string>
+				</dict>
+				<dict>
+					<!-- jsdoc multi-line comment;  if someone breaks up a comment over multiple lines interspersed by ?> this may break the parser -->
+					<key>name</key>
+					<string>comment.block.documentation.embedded.js</string>
+					<key>begin</key>
+					<string>/\*\*(?!/)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.embedded.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\*/</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.embedded.js</string>
+						</dict>
+					</dict>
+					<!-- include doc block parsing if desired -->
+				</dict>
+				<dict>
+					<key>name</name>
+					<string>comment.block.embedded.js</string>
+					<key>begin</key>
+					<string>(/\\*)(?:\\s*((@)internal)(?=\\s|(\\*/)))?</string>	<!-- again, @internal? -->
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.embedded.js</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>storage.type.internaldeclaration.embedded.js</string>
+						</dict>
+						<key>3</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.decorator.internaldeclaration.embedded.js</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\\*/</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.embedded.js</string>
+						</dict>
+					</dict>
+				</dict>
+			</array>
+		</dict>
 		<key>embedded-string</key>
 		<dict>
 			<key>begin</key>
@@ -591,7 +698,7 @@
 			<key>name</key>
 			<string>punctuation.definition.tag.html.embedded</string>
 		</dict>
-		<key>embedded-control-brackets</key>		
+		<key>embedded-control-bracket</key>		
 		<dict>
 			<key>match</key>
 			<string>[{}]</string>
