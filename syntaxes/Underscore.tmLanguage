@@ -20,7 +20,7 @@
 			<key>name</key>
 			<string>meta.embedded.js</string>
 			<key>begin</key>
-			<string>(&lt;\?js=?)</string>
+			<string>(?:\s*)(&lt;\?js=?)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
