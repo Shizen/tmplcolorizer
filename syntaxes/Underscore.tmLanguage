@@ -17,47 +17,8 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>name</key>
-			<string>meta.embedded.js</string>
-			<key>begin</key>
-			<string>(?:\s*)(&lt;\?js=?)</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.tag.html.embed.js</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>(\?&gt;)</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.tag.html.embed.js</string>
-				</dict>
-			</dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#embedded-punctuation</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#embedded-string</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#embedded-control-bracket</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#embedded-comment</string>
-				</dict>
-			</array>
+			<key>include</key>
+			<string>#embedded-js</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -559,6 +520,50 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>embedded-js</key>
+		<dict>
+			<key>name</key>
+			<string>meta.embedded.js</string>
+			<key>begin</key>
+			<string>(?:\s*)(&lt;\?js=?)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.html.embed.js</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(\?&gt;)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.html.embed.js</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#embedded-punctuation</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#embedded-string</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#embedded-control-bracket</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#embedded-comment</string>
+				</dict>
+			</array>
+		</dict>
 		<key>embedded-comment</key>
 		<dict>
 			<!-- taken from source.js, introduces a lot of "noisy" scope names ;) -->
@@ -978,6 +983,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#embedded-js</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#embedded-code</string>
 				</dict>
 				<dict>
@@ -1012,6 +1021,10 @@
 			<string>string.quoted.single.html</string>
 			<key>patterns</key>
 			<array>
+				<dict>
+					<key>include</key>
+					<string>#embedded-js</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#embedded-code</string>
@@ -1081,6 +1094,10 @@
 					<array>
 						<dict>
 							<key>include</key>
+							<string>#embedded-js</string>
+						</dict>
+						<dict>
+							<key>include</key>
 							<string>#embedded-code</string>
 						</dict>
 						<dict>
@@ -1116,6 +1133,10 @@
 					<string>string.quoted.single.html</string>
 					<key>patterns</key>
 					<array>
+						<dict>
+							<key>include</key>
+							<string>#embedded-js</string>
+						</dict>
 						<dict>
 							<key>include</key>
 							<string>#embedded-code</string>
