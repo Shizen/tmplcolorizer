@@ -2,7 +2,7 @@
     "name": "@shizen/tmplcolorizer",
     "displayName": "Underscore Template Colorizer",
     "description": "Introducing & Augmenting the Underscore tmLanguage file",
-    "version": "0.0.2-3",
+    "version": "0.0.2-4",
     "publisher": "shinworks",
     "engines": {
         "vscode": "^1.27.0"
