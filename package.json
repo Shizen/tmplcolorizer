@@ -24,6 +24,10 @@
     "keywords": [
         "underscore"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Shizen/tmplcolorizer"        
+    },
     "contributes": {
         "languages": [
             {
