@@ -1,5 +1,5 @@
 {
-    "name": "tmplcolorizer", 
+    "name": "tmplcolorizer",
     "displayName": "Underscore Template Colorizer",
     "description": "Introducing & Augmenting the Underscore tmLanguage file",
     "galleryBanner": {
@@ -12,7 +12,7 @@
         "url": "http:/www.shinworks.co"
     },
     "icon": "underscore.png",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "shinworks",
     "license": "SEE LICENSE IN LICENSE.txt",
     "engines": {
@@ -26,7 +26,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/Shizen/tmplcolorizer"        
+        "url": "https://github.com/Shizen/tmplcolorizer"
     },
     "contributes": {
         "languages": [
