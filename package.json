@@ -1,5 +1,5 @@
 {
-    "name": "@shizen/tmplcolorizer",
+    "name": "tmplcolorizer", 
     "displayName": "Underscore Template Colorizer",
     "description": "Introducing & Augmenting the Underscore tmLanguage file",
     "galleryBanner": {

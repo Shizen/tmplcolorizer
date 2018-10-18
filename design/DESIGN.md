@@ -16,7 +16,13 @@ I also took parts of vscode's js colorizer.
 
 Could start from [vscode's html colorizer](https://github.com/Microsoft/vscode/blob/master/extensions/html/syntaxes/html.tmLanguage.json)
 
-WinMerge compare to [this tmLanguage file](https://github.com/johnrork/ST3-HTML-Underscore-Syntax)
+Finally [this tmLanguage file](https://github.com/johnrork/ST3-HTML-Underscore-Syntax)
+
+Of course I converted all my original sources into xml format...
+
+`vsce` won't honor scoped npm package names, because it's all about the *fail*.  [#186](https://github.com/Microsoft/vscode-vsce/issues/186).  No excuse for this sort of obtuse lack of interop.  Coerce standard `package.json` pattern but then denegrade it?  Inexcusable.
+
+//"@shizen/tmplcolorizer",
 
 ## Issues
 
