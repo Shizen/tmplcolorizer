@@ -9,6 +9,15 @@ PList, YAML, JSON
 
 }
 
+[Sublime HTML colorizer](https://github.com/bradrobertson/sublime-packages/blob/master/HTML/HTML.tmLanguage)  
+With this mod: [stackoverflow](https://stackoverflow.com/questions/9655039/sublime-text-2-recognize-underscore-templates-as-html/11886848#11886848)
+
+I also took parts of vscode's js colorizer.
+
+Could start from [vscode's html colorizer](https://github.com/Microsoft/vscode/blob/master/extensions/html/syntaxes/html.tmLanguage.json)
+
+WinMerge compare to [this tmLanguage file](https://github.com/johnrork/ST3-HTML-Underscore-Syntax)
+
 ## Issues
 
 - So, I can't just include the `source.js` compiler because it barfs on js fragments (at least that's my theory).
