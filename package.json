@@ -6,13 +6,13 @@
         "color": "#29abe2",
         "theme": "light"
     },
-    "author": { 
-        "name" : "Sean Simmons",
-        "email" : "shin@shinworks.co",
-        "url" : "http:/www.shinworks.co"
+    "author": {
+        "name": "Sean Simmons",
+        "email": "shin@shinworks.co",
+        "url": "http:/www.shinworks.co"
     },
     "icon": "underscore.png",
-    "version": "0.0.2-4",
+    "version": "0.0.2",
     "publisher": "shinworks",
     "license": "SEE LICENSE IN LICENSE.txt",
     "engines": {
@@ -21,7 +21,9 @@
     "categories": [
         "Programming Languages"
     ],
-    "keywords": ["underscore"],
+    "keywords": [
+        "underscore"
+    ],
     "contributes": {
         "languages": [
             {
