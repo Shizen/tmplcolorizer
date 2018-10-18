@@ -46,7 +46,7 @@ If you want to change the template characters (at least until vscode team implem
 
 ## Release Notes
 
-### 0.0.3
+### 0.0.5
 
 Initial release
 
