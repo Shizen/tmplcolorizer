@@ -3,6 +3,5 @@
 design/**
 .gitignore
 vsc-extension-quickstart.md
-scratch.tmpl
-scratch.txt
+scratch.*
 underscore.svg

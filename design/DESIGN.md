@@ -24,8 +24,11 @@ Of course I converted all my original sources into xml format...
 
 //"@shizen/tmplcolorizer",
 
+- I wonder if I should `.gitignore` `scratch*`...  I mean it's not clean for other people, but it's useful for *me* ;).
+
 ## Issues
 
+- I need to test the HTML-escaped recognizer `[=-]?` (I haven't tested it yet).
 - So, I can't just include the `source.js` compiler because it barfs on js fragments (at least that's my theory).
 
       <key>patterns</key>

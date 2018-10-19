@@ -1,3 +1,11 @@
+<key>begin</key>
+<string>(?:\s*)({underscore-delimeter}[=-]?)</string>
+<key>defaults</key>
+<dict>
+	<key>underscore-delimeter</key>
+	<string>&lt;\?js</string>
+</dict>
+
 {
   begin = (&lt;)([a-zA-Z0-9:]++)(?=[^&gt;]*&gt;&lt;/\2&gt;);
   beginCaptures: {

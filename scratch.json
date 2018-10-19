@@ -1,0 +1,91 @@
+{
+  "customizeLanguageExtensions" : {
+    "blockify/**": {
+      "extensions": {
+        ".tmpl": "embeddedPythonExtension"
+      }
+    },
+    "package2/**": {
+      "extensions": {
+        ".tmpl": "tmplcolorizer"
+      },
+      "parameters": {
+        "underscore-delimeter" : "&lt;?js"
+      }
+    }
+  },
+  
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Tags",
+        "scope": [
+            "punctuation.definition.tag.html.embed.js"
+        ],
+        "settings": {
+            "foreground": "#666"
+        }
+      },
+      {
+        "name": "Embedded Tags",
+        "scope": [
+          "punctuation.definition.tag.html.embedded"
+        ],
+        "settings": {
+          "foreground": "#776"
+        }
+      },
+      {
+        "name": "Embedded Strings",
+        "scope": [
+          "string.quoted.single.html.embedded",
+          "punctuation.definition.string.begin.embedded",
+          "punctuation.definition.string.end.embedded"
+        ],
+        "settings": {
+          "foreground": "#aaa"
+        }
+      },
+      {
+        "name": "Embedded Control Brackets",
+        "scope": [
+          "punctuation.definition.tag.html.embedded.scope"
+        ],
+        "settings": {
+          "foreground": "#cc9"
+        }
+      },
+      {
+        "name": "Embedded JS Section",
+        "scope": [
+          "meta.embedded.js"
+        ],
+        "settings": {
+          "background": "#111",
+          "foreground": "#aaa"
+        }
+      },
+      {
+        "name": "Embedded Comments",
+        "scope": [
+          "comment.line.double-slash.embedded.js",
+          "comment.block.documentation.embedded.js",
+          "comment.block.embedded.js"
+        ],
+        "settings": {
+          "foreground": "#aaccaa"
+        }
+      },
+      {
+        "name": "Testing",
+        "scope": [
+          "storage.type.internaldeclaration.embedded.js",
+          "punctuation.decorator.internaldeclaration.embedded.js"
+        ],
+        "settings": {
+          "foreground": "#ff0000"
+        }
+      }
+    ]
+  }
+}
