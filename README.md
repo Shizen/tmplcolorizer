@@ -48,11 +48,11 @@ If you want to change the template characters (at least until vscode team implem
 
 ### 0.0.6
 
-Added support to recognize HTML-escaped values (oversight)
+- Added support to recognize HTML-escaped values (oversight)
 
 ### 0.0.5
 
-Initial release
+- Initial release
 
 ## License
 [MIT](LICENSE.txt)
