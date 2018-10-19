@@ -3,3 +3,4 @@ node_modules
 scratch.txt
 scratch.tmpl
 .vscode*
+vsc-extension-quickstart.md
