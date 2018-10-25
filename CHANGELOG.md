@@ -2,6 +2,10 @@
 
 All notable changes to the "@shizen/tmplcolorizer" extension will be documented in this file.
 
+## [0.0.7] - 2018-10-25
+### Changed
+
+- improved documentation
 
 ## [0.0.6] - 2018-10-18
 ### Added
