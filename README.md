@@ -106,6 +106,8 @@ The complete color set used in the screenshot above is...
 
 ## Known Issues
 
+Listed below are my known issues for this project.  If you have a comment, suggestion, request or other input on this project, please ask a question or leave a comment on the [vscode marketplace page for this project](https://marketplace.visualstudio.com/items?itemName=Shinworks.tmplcolorizer).  If you encounter an issue, even one listed here, and would like to see it fixed, please go to the [github issues](https://github.com/Shizen/tmplcolorizer/issues) tracker and file an issue.  This project is very much in an "on demand" mode.  If there is no demand, only issues which bother me sufficiently in contrast to my available time will actually get addressed.
+
 - This grammar provides only limited coloring for embedded js.
 - The scope names employed may be inappropriate.
 - This grammar currently identifies `<?js>` as the embedded js tag.  This [feature request](https://github.com/Microsoft/vscode/issues/61277) would allow "graceful" support for this issue.  Otherwise see my ["haxory"](#haxory) comment below.
